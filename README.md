@@ -7,6 +7,8 @@ Exo 2 = Lundi_ExoSurcharge <br/>
 Exo 3 = Lundi_ExoHeritage <br/>
 Exo 4 = Lundi_ExoPolymorphisme <br/>
 
+(uploaded le lundi, rename le mardi ;) )
+
 # Mardi
 Exo 1 = Mardi_ExoNuage <br/>
 Exo 2 = Mardi_ExoVisu <br/>
