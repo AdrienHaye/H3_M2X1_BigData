@@ -12,3 +12,4 @@ Exo 4 = Lundi_ExoPolymorphisme <br/>
 # Mardi
 Exo 1 = Mardi_ExoNuage <br/>
 Exo 2 = Mardi_ExoVisu <br/>
+Exo 3 = Mardi_ExoVarCat <br/>
