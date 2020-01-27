@@ -13,5 +13,8 @@ Exo 2 = Mardi_ExoVisu <br/>
 Exo 3 = Mardi_ExoVarCat <br/>
 
 # Mercredi
-Dockerfile
-Requirements.txt
+Dockerfile <br/>
+Requirements.txt <br/>
+
+# Lundi 27
+Exo = Lundi_Pyspark <br/>
