@@ -1,10 +1,28 @@
-FROM ubuntu
-RUN mkdir ./work
+FROM ubuntu:18.04
+
+# APT
 RUN apt update
-ENV TZ=Europe/Minsk
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone RUN apt install sudo -y
-RUN apt install python3 -y && apt install python3-pip -y
-RUN apt install python3-venv -y RUN apt install jupyter-notebook -y
-RUN apt install git -y WORKDIR ./work
-RUN python3 -m venv bigdata
-CMD ["sh", "-c" , "jupyter notebook --no-browser --port=8000 --ip='0.0.0.0' --allow-root"] COPY . ./bigdata EXPOSE 8000
+RUN apt -y install sudo
+
+# PYTHON
+RUN sudo apt install -y python3
+RUN sudo apt install -y python3-pip
+RUN sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
+RUN sudo apt install -y python3-venv
+
+# MKDIR
+RUN mkdir /workdir/ && cd /workdir/
+WORKDIR /workdir/
+
+# VENV
+RUN python3 -m venv --system-site-packages big-data-env
+
+# REQUIREMENTS
+RUN . big-data-env/bin/activate
+COPY requirements.txt .
+RUN pip3 install -r 'requirements.txt'
+
+# JUPYTER NOTEBOOK
+RUN pip3 install jupyter
+CMD ["sh", "-c" , "jupyter notebook --no-browser --port=8000 --ip='0.0.0.0' --allow-root"]
+EXPOSE 8000
