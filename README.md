@@ -18,3 +18,6 @@ Requirements.txt <br/>
 
 # Lundi 27
 Exo = Lundi_Pyspark <br/>
+
+# Mardi 28
+Exo = Mardi_bis_modele_lineaire <br/>
